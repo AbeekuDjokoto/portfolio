@@ -1,14 +1,15 @@
-import './input.css';
+"use client";
+import React from "react";
+import { RouterProvider } from "react-router-dom";
+
+import { Providers } from "./Providers";
+import { AppRouter } from "./routes/Routes";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1 class="text-3xl text-red-400 font-bold underline">
-    Hello world!
-  </h1>
-      </header>
-    </div>
+    <Providers>
+      <RouterProvider router={AppRouter} />
+    </Providers>
   );
 }
 
