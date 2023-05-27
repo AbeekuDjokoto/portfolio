@@ -1,0 +1,30 @@
+.root {
+  display: none;
+}
+
+@media (min-width: 500px) {
+  .root {
+    display: flex;
+    justify-content: space-between;
+
+    .linkList {
+      display: flex;
+      gap: 67px;
+    }
+
+    .imgList {
+      display: flex;
+      gap: 30px;
+
+      img {
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+          flex-grow: 1;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

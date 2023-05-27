@@ -1,0 +1,132 @@
+.root {
+  padding: 48px 24px;
+
+  .link {
+    position: relative;
+    text-decoration: none;
+    color: rgba(33, 255, 214, 0.72);
+    transition: color 0.3s ease-in-out;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: rgba(33, 255, 214, 0.72);
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: white;
+
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .arrowLink {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 24px;
+    color: var(--white);
+
+    &:before {
+      content: "";
+      width: 0;
+      height: 2px;
+      background-color: rgba(33, 255, 214, 0.72);
+
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      transition: width 0.3s ease-in-out;
+    }
+    &:after {
+      content: "\2192";
+      position: relative;
+      display: inline-block;
+      margin-left: 5px;
+      transform: rotate(-45deg);
+
+      transition: margin 0.3s ease-in-out, transform 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+        z-index: -1;
+      }
+      &:after {
+        color: rgba(33, 255, 214, 0.72);
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .textContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 90vh;
+    gap: 40px;
+    .bio {
+      display: grid;
+      gap: 16px;
+    }
+  }
+}
+
+@media (min-width: 815px) {
+  .root {
+    padding: 60px 138px;
+    .textContent {
+      height: 80vh;
+      max-width: 1300px;
+      width: 100%;
+      padding: 0px 50px;
+    }
+    .link {
+      margin: 10px;
+      position: relative;
+      transition: transform 0.1s ease-in-out;
+      padding: 10px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: rgba(33, 255, 214, 0.72);
+        transition: transform 0.5s;
+      }
+    }
+    .link::before,
+    .link::after {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      border-style: solid;
+      border-color: rgba(33, 255, 214, 0.72);
+      background-color: transparent;
+    }
+    .link::before {
+      border-width: 1px 0;
+      transform: scaleX(0);
+    }
+    .link::after {
+      border-width: 0 1px;
+      transform: scaleY(0);
+    }
+    .link:hover::before,
+    .link:hover::after {
+      transform: scale(1);
+    }
+  }
+}

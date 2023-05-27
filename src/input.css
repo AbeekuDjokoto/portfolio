@@ -2,10 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-.App {
-  text-align: center;
-  font-family: 'Inter', sans-serif;
-  /* font-family: 'Fira Sans', sans-serif; */
-/* font-family: 'Poppins', sans-serif;  */
+
+
+html {
+  --black: #1a201d;
+  --light-black: #171A1B;
+  --landing-bg: #1C1E22;
+  --white: #ffffff;
+  --primary-green: #0EE6B7;
+  --strong-green: #27C93F;
+  --light-green: #5EEAD4;
+  --border-green: rgba(45, 212, 191, 0.1);
+  --strong-yellow: #FFBD2E;
+  --strong-red: #FF5F56;
+  --primary-purple: #7000FF;
+  --primary-ash: #64748B;
+  --light-ash: #94A3B8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: var(--landing-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  font-weight: 400;
+  color: var(--white);
 }
 

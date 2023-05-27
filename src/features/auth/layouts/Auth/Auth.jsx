@@ -1,7 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 
-// import { LayoutLeft } from "../../components";
 import styles from "./Auth.module.scss";
 const { root, leftPanel, rightPanel } = styles;
 

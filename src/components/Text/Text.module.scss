@@ -1,0 +1,50 @@
+/* FONT WEIGHT */
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5,
+.text-h6 {
+  font-weight: bold;
+}
+
+/* SIZES */
+.text-h1 {
+  font-size: 1.5rem;
+  line-height: 40px;
+}
+
+.text-h2 {
+  font-size: 1.1rem;
+  line-height: 28px;
+}
+
+.text-h3 {
+  font-size: 1.5rem;
+  line-height: 1.33;
+}
+
+.text-p {
+  font-size: 0.875rem;
+  line-height: 2;
+}
+
+.text-span {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 500px) {
+  .text-h1 {
+    font-size: 4.5rem;
+    line-height: 108px;
+  }
+  .text-h2 {
+    font-size: 4rem;
+    line-height: 96px;
+  }
+  .text-p {
+    font-size: 1rem;
+    line-height: 2.2;
+  }
+}
