@@ -31,7 +31,7 @@ export const HomeLayout = () => {
             </Link>
           </Text>
         </div>
-        <Link className={styles.arrowLink}>
+        <Link className={styles.arrowLink} to="/experience">
           <Text as={"h2"}>See More About Me</Text>
         </Link>
       </div>

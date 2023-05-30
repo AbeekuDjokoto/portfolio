@@ -1,16 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-
-import styles from "./Auth.module.scss";
-const { root, leftPanel, rightPanel } = styles;
+import classes from "./Auth.module.scss";
+import { LeftLayout } from "../../components";
 
 export const AuthLayout = () => {
   return (
-    <div className={root}>
-      <div className={leftPanel}>
-        {/* <LayoutLeft /> */}
+    <div className={classes.container}>
+      <div className={classes.fixedContent}>
+        <LeftLayout />
       </div>
-      <div className={rightPanel}>
+      <div className={classes.scrollableContent}>
         <Outlet />
       </div>
     </div>

@@ -1,0 +1,17 @@
+.left {
+  width: 100%;
+  max-width: 378px;
+  margin: 0 auto;
+  padding: 48px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 500px) {
+  .left {
+    padding: 60px 0px;
+  }
+}
